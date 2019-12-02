@@ -1,0 +1,2 @@
+module lektion6 {
+}

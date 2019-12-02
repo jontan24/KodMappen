@@ -1,0 +1,13 @@
+package ovning42;
+
+public class Test {
+
+	public static void main(String[] args) {
+		L‰genhet l‰gga = new L‰genhet();
+		
+		System.out.println(l‰gga.prisPerKvm());
+		System.out.println(l‰gga.prisPerKvmPer≈r());
+		System.out.println(l‰gga.prisPer≈r());
+	}
+
+}

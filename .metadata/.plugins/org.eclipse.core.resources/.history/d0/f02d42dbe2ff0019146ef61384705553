@@ -1,0 +1,11 @@
+package ovningar;
+
+public class Ovning319 {
+
+	public static void main(String[] args) {
+		int sum;
+		for(int i = 2; i <= 100; i++) { sum = i += i;
+		}
+	}
+
+}

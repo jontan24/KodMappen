@@ -1,0 +1,11 @@
+package ovningar;
+import java.util.Scanner;
+public class Ovning325 {
+
+	public static void main(String[] args) {
+		Scanner scan = new.Scanner;
+		
+		
+	}
+
+}

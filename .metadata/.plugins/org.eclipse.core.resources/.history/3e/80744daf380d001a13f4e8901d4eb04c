@@ -1,0 +1,26 @@
+package inlämning4;
+import java.util.Scanner;
+public class Test {
+
+	public static void main(String[] args) {
+		Account j = new Account();
+		Scanner scan = new Scanner(System.in);
+		System.out.println("skriv in ditt kontonummer");
+
+		String tmpNbr = scan.nextLine();
+		j.setNbr(tmpNbr);
+		j.setBalance(500);
+		System.out.println(" Kontonummer: " + j.getNbr());
+		System.out.println("Balance : " + j.getBalance());
+		
+		j.credit(1000);
+		System.out.println("du har nu balance " + j.getBalance());
+		
+		j.withdraw(1500);
+		System.out.println("du har nu balance " + j.getBalance());
+		
+		scan.close();
+		
+	}
+
+}

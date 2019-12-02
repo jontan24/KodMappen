@@ -1,0 +1,30 @@
+package ovningar;
+
+import java.util.Scanner;
+
+//skriv ett program som läser in fem tal och skriver ut det största av dessa talen
+public class Ovning321 {
+
+	public static void main(String[] args) {
+			
+		Scanner skanna = new Scanner(System.in);
+		
+		int max = 0;
+		
+		 
+		System.out.println("ange tal1:");
+		int tal = skanna.nextInt();
+		
+		for (int i = 2; i < 5 ; i++) { System.out.println("ange tal" + i + ";");
+		tal = skanna.nextInt();
+		if (tal > max) {
+				max=tal;
+		}
+			
+			
+		}
+		System.out.println(max + "är det största talet");	
+
+	}
+
+}
