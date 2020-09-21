@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="finds" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ISProject.Controller">
+    <children>
+        <Line endX="-99.99996948242188" endY="97.0" layoutX="601.0" layoutY="169.0" startX="-100.0" startY="-67.39999389648438" />
+        <Line endX="459.79998779296875" layoutX="501.0" layoutY="75.0" startX="-467.3999938964844" />
+        <Label layoutX="222.0" layoutY="82.0" text="ISProject.Student">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="740.0" layoutY="82.0" text="Course">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="198.0" layoutY="302.0" text="Written exam">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="703.0" layoutY="302.0" text="Register results">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Line endX="234.4000244140625" layoutX="236.0" layoutY="292.0" startX="-199.1999969482422" />
+        <Line endX="323.60003662109375" layoutX="638.0" layoutY="292.0" startX="-105.20001220703125" />
+        <Button fx:id="AddNewStudentButton" layoutX="210.0" layoutY="116.0" mnemonicParsing="false" onAction="#btnAddStudent_Click" prefHeight="26.0" prefWidth="102.0" text="Add student" />
+        <Button fx:id="UpdateStudentButton" layoutX="210.0" layoutY="159.0" mnemonicParsing="false" onAction="#updateStudent_Click" prefHeight="26.0" prefWidth="102.0" text="Update student" />
+        <Button fx:id="RemoveExistingStudentButton" layoutX="210.0" layoutY="200.0" mnemonicParsing="false" onAction="#btnRemoveStudent_Click" text="Remove student" />
+        <Button fx:id="AddNewCourseButton" layoutX="696.0" layoutY="116.0" mnemonicParsing="false" onAction="#addCourse_Click" prefHeight="26.0" prefWidth="98.0" text="Add course" />
+        <Button fx:id="UpdateCourseButton" layoutX="696.0" layoutY="159.0" mnemonicParsing="false" onAction="#updateCourse_Click" prefHeight="26.0" prefWidth="98.0" text="Update course" />
+        <Button fx:id="RemoveExistingCourseButton" layoutX="696.0" layoutY="200.0" mnemonicParsing="false" onAction="#btnRemoveCourse_Click" text="Remove course" />
+        <Button fx:id="AddWrittenExamToCourse" layoutX="210.0" layoutY="394.0" mnemonicParsing="false" onAction="#addWrittenExamToCourse_Click" text="Add exam to course" />
+        <Button fx:id="RemoveWrittenExamFromCourse" layoutX="354.0" layoutY="480.0" mnemonicParsing="false" onAction="#btnRemoveCourse_Click" text="Remove from course" />
+        <Button layoutX="696.0" layoutY="442.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0" text="register result" />
+        <TextField fx:id="StudentFirstNameTextField" layoutX="35.0" layoutY="116.0" promptText="First name" />
+        <TextField fx:id="StudentLastnameTextField" layoutX="35.0" layoutY="159.0" promptText="Last name" />
+        <TextField fx:id="StudentIDTextField" editable="false" layoutX="35.0" layoutY="200.0" promptText="ISProject.Student-ID" />
+        <TextField fx:id="CourseNameTextField" layoutX="530.0" layoutY="116.0" promptText="Course name" />
+        <TextField fx:id="CourseIDTextField" layoutX="530.0" layoutY="159.0" promptText="Course-ID" />
+        <TextField fx:id="creditsForCourseTextField" layoutX="530.0" layoutY="200.0" promptText="Credits (0,5-30 pts)" />
+        <TextField layoutX="530.0" layoutY="442.0" promptText="Score (1-100)" />
+        <ComboBox fx:id="FindWrittenExamLocation" layoutX="35.0" layoutY="347.0" prefWidth="150.0" promptText="Location" />
+        <ComboBox fx:id="WrittenExamTimeHours" layoutX="35.0" layoutY="442.0" prefHeight="26.0" prefWidth="62.0" promptText="HH" />
+        <ComboBox fx:id="WrittenExamTimeMinutes" layoutX="114.0" layoutY="442.0" prefHeight="26.0" prefWidth="71.0" promptText="MM" />
+        <DatePicker fx:id="WrittenExamDatePicker" layoutX="35.0" layoutY="394.0" prefHeight="26.0" prefWidth="150.0" promptText="Date" />
+        <ComboBox fx:id="FindWrittenExamComboBox" layoutX="212.0" layoutY="480.0" onAction="#findWrittenExam_Click" prefHeight="26.0" prefWidth="98.0" promptText="Find exam" />
+        <ComboBox fx:id="findStudentCB" layoutX="360.0" layoutY="116.0" onAction="#btnFindStudent_Click" prefHeight="26.0" prefWidth="114.0" promptText="Find student" />
+        <ComboBox fx:id="findStudentCBToAddResult" layoutX="530.0" layoutY="347.0" onAction="#btnFindStudent_Click" prefWidth="150.0" promptText="ISProject.Student" />
+        <ComboBox fx:id="findWrittenExamCB" layoutX="530.0" layoutY="394.0" onAction="#findWrittenExam_Click" prefWidth="150.0" promptText="Written exam" />
+        <ComboBox fx:id="SearchForCourseComboBox" layoutX="846.0" layoutY="116.0" onAction="#btnFindCourse_Click" prefHeight="26.0" prefWidth="114.0" promptText="Find course" />
+        <Label layoutX="35.0" layoutY="97.0" text="Enter first name">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="35.0" layoutY="142.0" text="Enter last name">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="531.0" layoutY="426.0" text="Set exam score">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="530.0" layoutY="96.0" text="Enter course name">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="530.0" layoutY="142.0" text="Enter course-ID">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="530.0" layoutY="185.0" text="Set credits for course">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="530.0" layoutY="378.0" text="Choose written exam">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="530.0" layoutY="329.0" text="Choose student">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="35.0" layoutY="425.0" text="Choose time">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="35.0" layoutY="377.0" text="Choose a date">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="35.0" layoutY="330.0" text="Choose location">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Line endX="463.99993896484375" layoutX="500.0" layoutY="538.0" startX="-460.79998779296875" />
+        <ComboBox fx:id="ChooseCourseForExamComboBox" layoutX="210.0" layoutY="347.0" onAction="#btnFindCourse_Click" prefWidth="150.0" promptText="Course" />
+        <Label layoutX="210.0" layoutY="330.0" text="Choose course for exam:">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="345.0" layoutY="7.0" text="ISProject.Student management system">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="637.0" layoutY="185.0" text="*" textFill="RED">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="117.0" layoutY="56.0" textFill="RED" />
+        <Label layoutX="610.0" layoutY="142.0" text="*" textFill="RED">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="621.0" layoutY="97.0" text="*" textFill="RED">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="115.0" layoutY="142.0" text="*" textFill="RED">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="115.0" layoutY="97.0" text="*" textFill="RED">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="608.0" layoutY="426.0" text="*" textFill="RED">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="150.0" layoutY="96.0" text="Label" />
+        <Label fx:id="studentResponseLabel" layoutX="22.0" layoutY="266.0" />
+        <Label fx:id="courseResponseLabel" layoutX="456.0" layoutY="266.0" />
+        <Label fx:id="resultsResponseLabel" layoutX="456.0" layoutY="504.0" />
+        <Label layoutX="17.0" layoutY="504.0" />
+        <Line endX="0.60003662109375" endY="106.79998779296875" layoutX="501.0" layoutY="386.0" startX="0.60003662109375" startY="-68.39999389648438" />
+        <Text layoutX="33.0" layoutY="574.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group 33">
+            <font>
+                <Font name="Times New Roman" size="12.0" />
+            </font></Text>
+        <Text layoutX="33.0" layoutY="558.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SYSA21">
+            <font>
+                <Font name="Times New Roman" size="12.0" />
+            </font></Text>
+        <Text layoutX="33.0" layoutY="590.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contributors: Lovisa Ljungcrantz, Alexander Nilsson Sump, Jonathan Rooth">
+            <font>
+                <Font name="Times New Roman" size="12.0" />
+            </font>
+        </Text>
+        <Line endX="160.0" layoutX="312.0" layoutY="440.0" startX="-100.0" />
+        <Line endX="-10.000015258789062" layoutX="210.0" layoutY="456.0" startX="-10.000015258789062" startY="62.4000244140625" />
+        <Label layoutX="288.0" layoutY="446.0" text="Remove exam">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="212.0" layoutY="465.0" text="Choose exam to remove">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
